@@ -1,0 +1,364 @@
+
+Legion@LAPTOP-1NGOKGM9 MINGW64 ~
+$ git config -list
+error: did you mean `--list` (with two dashes)?
+
+Legion@LAPTOP-1NGOKGM9 MINGW64 ~
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=schannel
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.email=kitisak.junsong@gmail.com
+user.name=Kitisak Junsongsang
+
+Legion@LAPTOP-1NGOKGM9 MINGW64 ~
+$ cd D:\Job\Python_Test
+bash: cd: D:JobPython_Test: No such file or directory
+
+Legion@LAPTOP-1NGOKGM9 MINGW64 ~
+$ cd D:/Job/Python_Test
+
+Legion@LAPTOP-1NGOKGM9 MINGW64 /d/Job/Python_Test
+$ ls
+main.py  note.txt
+
+Legion@LAPTOP-1NGOKGM9 MINGW64 /d/Job/Python_Test
+$ git init
+Initialized empty Git repository in D:/Job/Python_Test/.git/
+
+Legion@LAPTOP-1NGOKGM9 MINGW64 /d/Job/Python_Test (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        main.py
+        note.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Legion@LAPTOP-1NGOKGM9 MINGW64 /d/Job/Python_Test (master)
+$ git add .
+
+Legion@LAPTOP-1NGOKGM9 MINGW64 /d/Job/Python_Test (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   main.py
+        new file:   note.txt
+
+
+Legion@LAPTOP-1NGOKGM9 MINGW64 /d/Job/Python_Test (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   main.py
+        new file:   note.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   main.py
+
+
+Legion@LAPTOP-1NGOKGM9 MINGW64 /d/Job/Python_Test (master)
+$ git add .
+
+Legion@LAPTOP-1NGOKGM9 MINGW64 /d/Job/Python_Test (master)
+$ git commit -M "add 2 function"
+error: unknown switch `M'
+usage: git commit [-a | --interactive | --patch] [-s] [-v] [-u[<mode>]] [--amend]
+                  [--dry-run] [(-c | -C | --squash) <commit> | --fixup [(amend|reword):]<commit>]
+                  [-F <file> | -m <msg>] [--reset-author] [--allow-empty]
+                  [--allow-empty-message] [--no-verify] [-e] [--author=<author>]
+                  [--date=<date>] [--cleanup=<mode>] [--[no-]status]
+                  [-i | -o] [--pathspec-from-file=<file> [--pathspec-file-nul]]
+                  [(--trailer <token>[(=|:)<value>])...] [-S[<keyid>]]
+                  [--] [<pathspec>...]
+
+    -q, --[no-]quiet      suppress summary after successful commit
+    -v, --[no-]verbose    show diff in commit message template
+
+Commit message options
+    -F, --[no-]file <file>
+                          read message from file
+    --[no-]author <author>
+                          override author for commit
+    --[no-]date <date>    override date for commit
+    -m, --[no-]message <message>
+                          commit message
+    -c, --[no-]reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --[no-]reuse-message <commit>
+                          reuse message from specified commit
+    --[no-]fixup [(amend|reword):]commit
+                          use autosquash formatted message to fixup or amend/reword specified commit
+    --[no-]squash <commit>
+                          use autosquash formatted message to squash specified commit
+    --[no-]reset-author   the commit is authored by me now (used with -C/-c/--amend)
+    --trailer <trailer>   add custom trailer(s)
+    -s, --[no-]signoff    add a Signed-off-by trailer
+    -t, --[no-]template <file>
+                          use specified template file
+    -e, --[no-]edit       force edit of commit
+    --[no-]cleanup <mode> how to strip spaces and #comments from message
+    --[no-]status         include status in commit message template
+    -S, --[no-]gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --[no-]all        commit all changed files
+    -i, --[no-]include    add specified files to index for commit
+    --[no-]interactive    interactively add files
+    -p, --[no-]patch      interactively add changes
+    -o, --[no-]only       commit only specified files
+    -n, --no-verify       bypass pre-commit and commit-msg hooks
+    --verify              opposite of --no-verify
+    --[no-]dry-run        show what would be committed
+    --[no-]short          show status concisely
+    --[no-]branch         show branch information
+    --[no-]ahead-behind   compute full ahead/behind values
+    --[no-]porcelain      machine-readable output
+    --[no-]long           show status in long format (default)
+    -z, --[no-]null       terminate entries with NUL
+    --[no-]amend          amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    --post-rewrite        opposite of --no-post-rewrite
+    -u, --[no-]untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+    --[no-]pathspec-from-file <file>
+                          read pathspec from file
+    --[no-]pathspec-file-nul
+                          with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+Legion@LAPTOP-1NGOKGM9 MINGW64 /d/Job/Python_Test (master)
+$ git commit -m "add 2 function"
+[master (root-commit) 90d5dda] add 2 function
+ 2 files changed, 60 insertions(+)
+ create mode 100644 main.py
+ create mode 100644 note.txt
+
+Legion@LAPTOP-1NGOKGM9 MINGW64 /d/Job/Python_Test (master)
+$ git diff
+
+Legion@LAPTOP-1NGOKGM9 MINGW64 /d/Job/Python_Test (master)
+$ git log
+commit 90d5ddafd85ff313efb47037ffc285d6e4410b81 (HEAD -> master)
+Author: Kitisak Junsongsang <kitisak.junsong@gmail.com>
+Date:   Sun Jun 1 22:01:45 2025 +0700
+
+    add 2 function
+
+Legion@LAPTOP-1NGOKGM9 MINGW64 /d/Job/Python_Test (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .env
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Legion@LAPTOP-1NGOKGM9 MINGW64 /d/Job/Python_Test (master)
+$ git add .
+
+Legion@LAPTOP-1NGOKGM9 MINGW64 /d/Job/Python_Test (master)
+$ git commit -m "add env file"
+[master 7c06857] add env file
+ 1 file changed, 2 insertions(+)
+ create mode 100644 .env
+
+Legion@LAPTOP-1NGOKGM9 MINGW64 /d/Job/Python_Test (master)
+$ git log
+commit 7c06857025941063ebdd44f395593c7766d73d3d (HEAD -> master)
+Author: Kitisak Junsongsang <kitisak.junsong@gmail.com>
+Date:   Sun Jun 1 22:04:51 2025 +0700
+
+    add env file
+
+commit 90d5ddafd85ff313efb47037ffc285d6e4410b81
+Author: Kitisak Junsongsang <kitisak.junsong@gmail.com>
+Date:   Sun Jun 1 22:01:45 2025 +0700
+
+    add 2 function
+
+Legion@LAPTOP-1NGOKGM9 MINGW64 /d/Job/Python_Test (master)
+$ git dif
+git: 'dif' is not a git command. See 'git --help'.
+
+The most similar commands are
+        diff
+        config
+        difftool
+        init
+        refs
+
+Legion@LAPTOP-1NGOKGM9 MINGW64 /d/Job/Python_Test (master)
+$ git diff
+diff --git a/.env b/.env
+index 14d0ff8..a4bf835 100644
+--- a/.env
++++ b/.env
+@@ -1,2 +1,3 @@
+ USER_ID = Iladod3741
+-PASSWORD = 1234567890
+\ No newline at end of file
++PASSWORD = 1234567890
++URL = https://example.com/api
+\ No newline at end of file
+
+Legion@LAPTOP-1NGOKGM9 MINGW64 /d/Job/Python_Test (master)
+$ git add .
+
+Legion@LAPTOP-1NGOKGM9 MINGW64 /d/Job/Python_Test (master)
+$ git commit -m "add URL in env file"
+[master ed50f5c] add URL in env file
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Legion@LAPTOP-1NGOKGM9 MINGW64 /d/Job/Python_Test (master)
+$ git log
+commit ed50f5cdcbcf2ae8aca83828abf3db8fa80c4b6e (HEAD -> master)
+Author: Kitisak Junsongsang <kitisak.junsong@gmail.com>
+Date:   Sun Jun 1 22:06:37 2025 +0700
+
+    add URL in env file
+
+commit 7c06857025941063ebdd44f395593c7766d73d3d
+Author: Kitisak Junsongsang <kitisak.junsong@gmail.com>
+Date:   Sun Jun 1 22:04:51 2025 +0700
+
+    add env file
+
+commit 90d5ddafd85ff313efb47037ffc285d6e4410b81
+Author: Kitisak Junsongsang <kitisak.junsong@gmail.com>
+Date:   Sun Jun 1 22:01:45 2025 +0700
+
+    add 2 function
+
+Legion@LAPTOP-1NGOKGM9 MINGW64 /d/Job/Python_Test (master)
+$ echo "# myDemo" >> README.md
+
+Legion@LAPTOP-1NGOKGM9 MINGW64 /d/Job/Python_Test (master)
+$ git add README.md
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+
+Legion@LAPTOP-1NGOKGM9 MINGW64 /d/Job/Python_Test (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   README.md
+
+
+Legion@LAPTOP-1NGOKGM9 MINGW64 /d/Job/Python_Test (master)
+$ git commit -m "add readme"
+[master c332e24] add readme
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+Legion@LAPTOP-1NGOKGM9 MINGW64 /d/Job/Python_Test (master)
+$ git branch -M main
+
+Legion@LAPTOP-1NGOKGM9 MINGW64 /d/Job/Python_Test (main)
+$ git remote add origin https://github.com/Kitisak13/myDemo.git
+
+Legion@LAPTOP-1NGOKGM9 MINGW64 /d/Job/Python_Test (main)
+$ git push origin main
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 20 threads
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (13/13), 1.58 KiB | 1.58 MiB/s, done.
+Total 13 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/Kitisak13/myDemo.git
+ * [new branch]      main -> main
+
+Legion@LAPTOP-1NGOKGM9 MINGW64 /d/Job/Python_Test (main)
+$ git pull origin main
+From https://github.com/Kitisak13/myDemo
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+Legion@LAPTOP-1NGOKGM9 MINGW64 /d/Job/Python_Test (main)
+$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        bmi.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Legion@LAPTOP-1NGOKGM9 MINGW64 /d/Job/Python_Test (main)
+$ git add .
+
+Legion@LAPTOP-1NGOKGM9 MINGW64 /d/Job/Python_Test (main)
+$ git commit -m "add html file to BMI Checking"
+[main ca969df] add html file to BMI Checking
+ 1 file changed, 51 insertions(+)
+ create mode 100644 bmi.html
+
+Legion@LAPTOP-1NGOKGM9 MINGW64 /d/Job/Python_Test (main)
+$ git log
+commit ca969df5e2bcc0dafbcd7a4c732c98b041033918 (HEAD -> main)
+Author: Kitisak Junsongsang <kitisak.junsong@gmail.com>
+Date:   Sun Jun 1 22:15:31 2025 +0700
+
+    add html file to BMI Checking
+
+commit c332e24a1eff9d933e9d7f1cb7b3e590a6b2f5b9 (origin/main, origin/HEAD)
+Author: Kitisak Junsongsang <kitisak.junsong@gmail.com>
+Date:   Sun Jun 1 22:09:32 2025 +0700
+
+    add readme
+
+commit ed50f5cdcbcf2ae8aca83828abf3db8fa80c4b6e
+Author: Kitisak Junsongsang <kitisak.junsong@gmail.com>
+Date:   Sun Jun 1 22:06:37 2025 +0700
+
+    add URL in env file
+
+commit 7c06857025941063ebdd44f395593c7766d73d3d
+Author: Kitisak Junsongsang <kitisak.junsong@gmail.com>
+Date:   Sun Jun 1 22:04:51 2025 +0700
+
+    add env file
+
+Legion@LAPTOP-1NGOKGM9 MINGW64 /d/Job/Python_Test (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+Legion@LAPTOP-1NGOKGM9 MINGW64 /d/Job/Python_Test (main)
+$ git push origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 20 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.29 KiB | 1.29 MiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Kitisak13/myDemo.git
+   c332e24..ca969df  main -> main
+
+

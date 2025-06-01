@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>ตรวจเช็คค่า BMI</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background: #f9f9f9; }
+        .container { max-width: 400px; margin: auto; background: #fff; padding: 24px; border-radius: 8px; box-shadow: 0 2px 8px #ccc; }
+        label { display: block; margin-top: 16px; }
+        input[type="number"] { width: 100%; padding: 8px; margin-top: 4px; }
+        button { margin-top: 20px; padding: 10px 20px; background: #0078d7; color: #fff; border: none; border-radius: 4px; cursor: pointer; }
+        .result { margin-top: 24px; font-size: 1.2em; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>ตรวจเช็คค่า BMI</h2>
+        <form id="bmiForm">
+            <label for="weight">น้ำหนัก (กิโลกรัม):</label>
+            <input type="number" id="weight" name="weight" min="1" step="any" required>
+
+            <label for="height">ส่วนสูง (เซนติเมตร):</label>
+            <input type="number" id="height" name="height" min="1" step="any" required>
+
+            <button type="submit">คำนวณ BMI</button>
+        </form>
+        <div class="result" id="result"></div>
+    </div>
+    <script>
+        document.getElementById('bmiForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const weight = parseFloat(document.getElementById('weight').value);
+            const heightCm = parseFloat(document.getElementById('height').value);
+            if (weight > 0 && heightCm > 0) {
+                const heightM = heightCm / 100;
+                const bmi = weight / (heightM * heightM);
+                let status = '';
+                if (bmi < 18.5) status = 'น้ำหนักน้อย';
+                else if (bmi < 23) status = 'น้ำหนักปกติ';
+                else if (bmi < 25) status = 'น้ำหนักเกิน';
+                else if (bmi < 30) status = 'อ้วนระดับ 1';
+                else status = 'อ้วนระดับ 2';
+                document.getElementById('result').innerHTML = 
+                    `ค่า BMI ของคุณคือ <b>${bmi.toFixed(2)}</b> (${status})`;
+            } else {
+                document.getElementById('result').textContent = 'กรุณากรอกข้อมูลให้ถูกต้อง';
+            }
+        });
+    </script>
+</body>
+</html>
